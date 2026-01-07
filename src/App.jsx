@@ -1,20 +1,18 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home.jsx'
-import NavBar from './Components/NavBar.jsx'
 import About from './Components/About.jsx'
-import Footer from './Components/Footer.jsx'
+import PageNotFound from './Components/PageNotFound.jsx'
 
 
 const App = () => {
   return (
     <div>
-      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="*" element={<PageNotFound></PageNotFound>} />
       </Routes>
-      <Footer />
     </div>
   )
 }

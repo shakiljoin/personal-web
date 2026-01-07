@@ -1,15 +1,16 @@
 import React from "react";
 import { FaBars, FaXmark } from "react-icons/fa6";
+import logo from "../assets/logo.png";
 
 const NavBar = () => {
   const [showMenu, setShowMenu] = React.useState(false);
   return (
-    <nav className="fixed w-full z-50 bg-black backdrop:-blur-sm py-4 px-8 shadow-lg">
+    <nav className="fixed h-20 w-full z-50 bg-dark-100/90 backdrop:blur-sm py-4 px-8 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white font-bold text-xl">
-          <a href="#" className="text-3xl font-bold text-white">
-            Shakil
-            <span className="text-purple-600">Ahamed</span>
+        <div className="text-white font-bold">
+          <a href="#" className="text-sm font-bold text-white">
+            <img src={logo} alt=" logo" 
+            className="w-16 rounded-4xl" />
             {/* <div
               className="w-6 h-6 rounded-full
               bg-gradient-to-t
@@ -18,7 +19,7 @@ const NavBar = () => {
           </a>
         </div>
 
-        <div className=" hidden md:flex space-x-10">
+        <div className=" hidden md:flex items-center space-x-10"> 
           <a
             href="#home"
             className="relative text-white/80 transition duration-300 hover:text-purple-600 group"
@@ -55,7 +56,7 @@ const NavBar = () => {
             <span>Contact</span>
             <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></span>
           </a>
-        <a href="" className=" p-1 border-purple-700 border-2 rounded-lg text-white text-sm hover:bg-purple-800">Hire Me</a>
+        <a href="#contact" className=" p-1 border-purple-700 border-2 rounded-lg text-white text-sm hover:bg-purple-800">Hire Me</a>
         </div>
         {/* Mobile menu button */}
         <div className="md:hidden text-white">

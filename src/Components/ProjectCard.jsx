@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const ProjectCard = ({ title, imageUrl, description, tags = [] }) => {
+const ProjectCard = ({ title, imageUrl, description, tags = [], codeLink }) => {
   return (
     <div
       className="bg-dark-100/90 backdrop:-blur-sm rounded-2xl overflow-hidden 
@@ -36,13 +36,17 @@ const ProjectCard = ({ title, imageUrl, description, tags = [] }) => {
             view demo
           </a>
 
-          <a
-            href="#"
-            className="text-center text-white px-4 py-2 border border-purple-600
-    rounded-lg font-medium hover:bg-purple-500/20 transition duration-300"
-          >
-            Code
-          </a>
+           {codeLink && (
+            <a
+              href={codeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-center text-white px-4 py-2 border border-purple-600
+              rounded-lg font-medium hover:bg-purple-500/20 transition duration-300"
+            >
+              Code
+            </a>
+          )}
         </div>
 
        

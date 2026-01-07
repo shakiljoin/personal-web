@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import { motion } from "framer-motion";
 import {
   FaEnvelope,
@@ -10,13 +10,34 @@ import {
 } from "react-icons/fa";
 import { section } from "framer-motion/m";
 
+import emailjs from "@emailjs/browser";
+
+
+
+
+
 const Content = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm("service_xpayyu7","template_wqkdqhg",form.current,"6U6j9Kwmpyxr4_6-B").then(
+      () => {
+        alert("Message sent successfully");
+        form.current.reset();
+      },
+      (error) => {
+        alert("Message failed to send",error.text);
+      }
+    )
+
+    }
   return (
     <section id="contact" className="bg-black p-20">
         <div className="w-full h-0.5 bg-purple-600"></div>
       <div className="container mt-10 mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-4">
-          Get In
+        <h2 className="text-3xl font-bold text-white text-center mb-4">
+          Get In{" "}
           <span className="text-purple-500">Touch</span>
         </h2>
         <p
@@ -78,7 +99,9 @@ const Content = () => {
 
                 <div className="flex  space-x-4">
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/shakilahamedweb/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full
                             bg-dark-300 flex items-center justify-center
                             text-blue-500 hover:bg-blue-500 hover:text-white
@@ -88,7 +111,9 @@ const Content = () => {
                   </a>
 
                   <a
-                    href="#"
+                    href="https://github.com/shakiljoin"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full
                             bg-dark-300 flex items-center justify-center
                             text-white text-500 hover:bg-black-500 hover:text-black
@@ -98,7 +123,9 @@ const Content = () => {
                   </a>
 
                   <a
-                    href="#"
+                    href="https://www.instagram.com/xshakilsha?igsh=MWg1NXFxdHpic2Q0Zw=="
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full
                             bg-dark-300 flex items-center justify-center
                             text-purple-500 hover:bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 text-white hover:text-white
@@ -112,7 +139,7 @@ const Content = () => {
 
             {/* Content Form */}
             <div>
-              <form className="space-y-6">
+              <form ref={form} onSubmit={sendEmail} className="space-y-6">
                 <div>
                   <label
                     htmlFor="name"
@@ -142,6 +169,22 @@ const Content = () => {
                             border-dark-300 rounded-lg px-4 py-3 outline-none"
                     type="email"
                     placeholder="abcd@example.com"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="subject"
+                    className="block
+                            text-gray-300 mb-2"
+                  >
+                    Subject
+                  </label>
+                  <input
+                    className="w-full text-white bg-dark-100/90 backdrop:-blur-sm border
+                            border-dark-300 rounded-lg px-4 py-3 outline-none"
+                    type="text"
+                    placeholder="Enter your Subject"
                   />
                 </div>
 

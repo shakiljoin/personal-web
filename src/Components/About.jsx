@@ -13,7 +13,7 @@ const About = () => {
       <div className="container mt-10 mx-auto px-6">
         {/* Heading */}
         <h2 className="text-3xl text-white font-bold text-center mb-4">
-          About <span className="text-purple-600">ME</span>
+          ABOUT <span className="text-purple-600">Me</span>
         </h2>
         <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16">
           Get to know me a little better and what I offer

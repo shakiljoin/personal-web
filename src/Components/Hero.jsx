@@ -14,9 +14,9 @@ const Hero = () => {
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
         {/* /Left side content */}
         <div className="md:w-1/2 ml-12 mb-10 md:mb-0">
-          <h1 className="text-4xl md:text-6xl text-black mb-4 md:mb-0">
-            Hi, I'm{" "}
-            <span className="text-purple-500 font-bold">Shakil-Ahamed</span>
+          <h1 className="text-4xl md:text-6xl text-white mb-4 md:mb-0">
+            <span className="text-3xl">Hi, I'm{" "}</span>
+            <span className="text-purple-500 text-5xl font-bold bg-gradient-to-tr from-purple-600 via-purple-400 to-purple-200 bg-clip-text text-transparent">Shakil-Ahamed</span>
           </h1>
           <h2 className="text-white text-2xl md:text-4xl font-semibold mb-6 typewriter">
             Front End Developer
@@ -30,7 +30,8 @@ const Hero = () => {
           <div>
             <div className="flex space-x-5 mt-5">
               <a
-                href=""
+                href="./Shakil_Ahamed_Dev_2.pdf"
+                download=""
                 className="bg-purple-600 hover:bg-purple-500/20 rounded-lg pl-3 pr-3 pt-1 pb-1 text-white font-medium"
               >
                 Download CV
@@ -56,8 +57,8 @@ const Hero = () => {
               </a>
 
               <a
-                href=""
-                className="border-purple-700 border-2 rounded-lg text-white  hover:bg-purple-800"
+                href="#contact"
+                className=" py-2 px-2 border-purple-700 border-2 rounded-lg text-white text-sm hover:bg-purple-800"
               >
                 Hire Me
               </a>
