@@ -7,7 +7,7 @@ import { FaArrowCircleRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 import project4 from "../assets/project4.avif";
-import project2 from "../assets/project2.avif";
+import project2 from "../assets/chatgbt.png";
 import project6 from "../assets/project6.avif";
 import Project1 from "../assets/projects1.png";
 
@@ -26,17 +26,18 @@ const projects = [
     title: "Chatgbt Clone",
     description: "My personal portfolio to showcase my skills and projects.",
     imageUrl: project2,
-    tags: ["React", "Tailwind CSS", "Framer Motion"],
+    tags: ["Python","OpenAI API","FastAPI","React", "Tailwind CSS", "Framer Motion"],
     codeLink: "https://github.com/shakiljoin/Chat_Bot",
     demoLink: "https://chatbot-production-a644.up.railway.app/",
   },
   {
     id: 3,
-    title: "Portfolio Website",
-    description: "My personal portfolio to showcase my skills and projects.",
+    title: "Ecommerce Website",
+    description: "On Processing.",
     imageUrl: project6,
     tags: ["React", "Tailwind CSS", "Framer Motion"],
-    codeLink: "https://github.com/shakiljoin/personal-web.git",
+    codeLink: "#",
+    demoLink: "#",
   },
 ];
 
