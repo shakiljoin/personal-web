@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import gif from "../assets/gif.gif";
 import linkedin from "../assets/linkedin.svg";
@@ -14,6 +13,7 @@ const Hero = () => {
       viewport={{ once: true }}
       id="home"
       className="min-h-screen flex items-center pt-20 pb-16 bg-black"
+      
     >
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
         {/* /Left side content */}

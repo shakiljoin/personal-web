@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const ProjectCard = ({ title, imageUrl, description, tags = [], codeLink }) => {
+const ProjectCard = ({ title, imageUrl, description, tags = [], codeLink, demoLink }) => {
   return (
     <div
       className="bg-dark-100/90 backdrop:-blur-sm rounded-2xl overflow-hidden 
@@ -28,13 +28,17 @@ const ProjectCard = ({ title, imageUrl, description, tags = [], codeLink }) => {
 
         {/* BUTTON */}
         <div className="mt-auto flex flex-col gap-3">
+          {demoLink && (
           <a
-            href="#"
+            href={demoLink}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-center text-white px-4 py-2 bg-purple-500
-    rounded-lg font-medium hover:bg-purple-700 transition duration-300"
+            rounded-lg font-medium hover:bg-purple-700 transition duration-300"
           >
             view demo
           </a>
+          )}
 
            {codeLink && (
             <a
